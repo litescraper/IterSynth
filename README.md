@@ -429,3 +429,12 @@ This codebase is built on top of [verl](https://github.com/volcengine/verl) (*Hy
 IterSynth is licensed under the **Apache License 2.0**, except for the third-party components listed in [LICENSE.txt](./LICENSE.txt). See that file for the full license text and dependency attributions.
 
 This repository is a derivative work of [verl](https://github.com/volcengine/verl) (Copyright 2023-2024 Bytedance Ltd. and/or its affiliates), which is also licensed under Apache-2.0. Modifications made by Tencent in this distribution are Copyright (C) Tencent. Original copyright notices are preserved at the top of each file.
+
+
+## Serper-compatible endpoints
+
+Set `SERPER_BASE_URL` to a compatible API base (without a search route) and
+use that provider's key in the existing Serper API-key configuration. The
+base defaults to `https://google.serper.dev`; trailing slashes are removed
+before adding the existing route. Separate page-scraping endpoints are unchanged.
+Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others).

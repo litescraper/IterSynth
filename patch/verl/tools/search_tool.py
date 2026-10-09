@@ -67,7 +67,7 @@ logger.setLevel(os.getenv("VERL_LOGGING_LEVEL", "WARN"))
 T = TypeVar("T")
 
 SERPER_API_KEY = os.environ.get("SERPER_API_KEY", "")
-SERPER_API_URL = "https://google.serper.dev/search"
+SERPER_API_URL = f'{os.getenv("SERPER_BASE_URL", "https://google.serper.dev").rstrip("/")}/search'
 
 
 def _contains_chinese(text: str) -> bool:
